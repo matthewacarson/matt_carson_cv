@@ -21,13 +21,23 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 \documentclass[
-	%a4paper, % Uncomment for A4 paper size (default is US letter)
+%	a4paper, % Uncomment for A4 paper size (default is US letter)
 	11pt, % Default font size, can use 10pt, 11pt or 12pt
+%	legalpaper,
 %	draft
 ]{resume} % Use the resume class
 
 %\usepackage{ebgaramond} % Use the EB Garamond font
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[L]{Carson, \textit{vita}}
+\fancyfoot[C]{Page \thepage{} of \pageref{LastPage}}
+\fancyfoot[L]{Carson, \textit{vita}}
+\fancyfoot[R]{\today}
+\renewcommand{\headrulewidth}{0pt} % header rule
 %------------------------------------------------
 \name{Matthew Carson} % Your name to appear at the top
 
@@ -118,8 +128,6 @@ of COVID-19. See ‘Published Works’ section for the corresponding paper.
 
 \end{rSection}
 \end{samepage}
-
-\clearpage
 %----------------------------------------------------------------------------------------
 %	PUBLISHED WORKS SECTION
 %----------------------------------------------------------------------------------------
