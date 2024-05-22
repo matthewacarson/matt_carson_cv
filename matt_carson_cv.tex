@@ -31,6 +31,23 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+	top=0.5in, % Top margin
+	bottom=0.95in, % Bottom margin
+	left=0.75in, % Left margin
+	right=0.75in, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
 \pagestyle{fancy}
 \fancyhf{}
 %\fancyhead[L]{Carson, \textit{vita}}
@@ -131,6 +148,7 @@ of COVID-19. See ‘Published Works’ section for the corresponding paper.
 %----------------------------------------------------------------------------------------
 %	PUBLISHED WORKS SECTION
 %----------------------------------------------------------------------------------------
+\clearpage
 \begin{samepage}
 \begin{rSection}{Published Works}
 “Global Warming and the Takings Clause: Can Eminent Domain Be Used to \hfill November 1, 2023 \\
@@ -162,9 +180,9 @@ Political Science 191H: Research Design Seminar for Honors Thesis
 \begin{rSection}{Languages and Technical Skills}
 	\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l @{}}
 		Spoken/Written & Spanish (limited reading and speaking) \\
-		Programming & R{\scriptsize **}, Python{\scriptsize *}, Stata{\scriptsize *}, \LaTeX{{\scriptsize *}} \\
+		Programming & \texttt{{\large R}}{\scriptsize **}, Python{\scriptsize *}, Stata{\scriptsize *}, \LaTeX{{\scriptsize *}} \\
 		Version Control & Git{\scriptsize *} \\
-		Citation Management & Zotero{\scriptsize ***}, BiB\TeX{}{\scriptsize *}
+		Citation Management & Zotero{\scriptsize ***}, BIB\TeX{}{\scriptsize *}
 	\end{tabular}
 	
 {\scriptsize *}{\small Working knowledge;} {\scriptsize **}{\small Intermediate;} {\scriptsize ***}{\small Intermediate-advanced.}
