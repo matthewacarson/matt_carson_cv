@@ -50,19 +50,6 @@
 \usepackage{textcomp}
 
 \usepackage{multicol}
-%----------------------------------------------------------------------------------------
-%	MARGINS
-%----------------------------------------------------------------------------------------
-
-\usepackage{geometry} % Required for adjusting page dimensions and margins
-
-\geometry{
-	top=0.6in, % Top margin
-	bottom=0.75in, % Bottom margin
-	left=0.75in, % Left margin
-	right=0.75in, % Right margin
-	%showframe, % Uncomment to show how the type block is set on the page
-}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND ADDRESS COMMANDS
@@ -115,7 +102,7 @@
 \let\ori@document=\document % Store the original \document command
 \renewcommand{\document}{
 	\ori@document  % Output the original \document command but add to it below
-	\printname % Output the user's name
+%	\printname % Output the user's name
 	\@ifundefined{@addressone}{}{\printaddress{\@addressone}} % Output the first address if specified
 	\@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}} % Output the second address if specified
 	\@ifundefined{@addressthree}{}{\printaddress{\@addressthree}} % Output the third address if specified
