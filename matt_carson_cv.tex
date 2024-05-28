@@ -42,7 +42,7 @@
 	bottom=1in, % Bottom margin
 	left=0.75in, % Left margin
 	right=0.75in, % Right margin
-	%showframe, % Uncomment to show how the type block is set on the page
+%	showframe, % Uncomment to show how the type block is set on the page
 }
 
 %----------------------------------------------------------------------------------------
@@ -51,17 +51,19 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{Carson, \textit{vita}}
-\fancyfoot[C]{Page \thepage{} of \pageref{LastPage}}
+\fancyfoot[L]{\href{https://bit.ly/MattCarsonCV}{bit.ly/MattCarsonCV}}
+\fancyfoot[C]{\thepage{} of \pageref{LastPage}}
 %\fancyfoot[L]{Carson, \textit{vita}}
-\fancyfoot[R]{\today}
+\fancyfoot[R]{\href{https://bit.ly/MattCarsonCV}{\the\month.\the\day.\the\year}}
 \renewcommand{\headrulewidth}{0pt} % header rule
 
 % Define a custom page style for the first page
 \fancypagestyle{firstpagestyle}{
     \fancyhf{} % clear all header and footer fields
+    \fancyfoot[L]{\href{https://bit.ly/MattCarsonCV}{bit.ly/MattCarsonCV}}
     \fancyhead[C]{ \newline\vfill\printname}
-    \fancyfoot[C]{Page \thepage{} of \pageref{LastPage}}
-    \fancyfoot[R]{\today}
+    \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
+    \fancyfoot[R]{\href{https://bit.ly/MattCarsonCV}{\the\month.\the\day.\the\year}}
 }
 %------------------------------------------------
 \name{Matthew Carson} % Your name to appear at the top
@@ -80,6 +82,19 @@
 
 \begin{document}
 \thispagestyle{firstpagestyle}
+%----------------------------------------------------------------------------------------
+%	RESEARCH INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+\begin{samepage}
+\begin{rSection}{Research Interests}
+\begin{tabular}{@{} l @{\hspace{10ex}} l @{\hspace{10ex}} l @{\hspace{10ex}} l @{}}
+Organized labor 		& Incarceration 	& Race/racism 			& Historical methods \\
+Political economy 	& Police violence 		& Social class 			& Quantitative methods
+\end{tabular}
+
+\end{rSection}
+\end{samepage}
+
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
@@ -102,25 +117,12 @@
 \end{samepage}
 
 %----------------------------------------------------------------------------------------
-%	RESEARCH INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-\begin{samepage}
-\begin{rSection}{Research Interests}
-\begin{tabular}{@{} l @{\hspace{10ex}} l @{\hspace{10ex}} l @{\hspace{10ex}} l @{}}
-Organized labor 		& The carceral state 	& Race/racism 			& Historical methods \\
-Political economy 	& Police violence 		& Social class 			& Quantitative methods
-\end{tabular}
-
-\end{rSection}
-\end{samepage}
-
-%----------------------------------------------------------------------------------------
 %	AWARDS AND SCHOLARSHIPS SECTION
 %----------------------------------------------------------------------------------------
 \begin{samepage}
 \begin{rSection}{Awards and Scholarships}
 \textbf{Highest Honors, UCLA Political Science Undergraduate Thesis} \hfill May 2024 \\
-Studied the relationship between economic inequality, race, and gentrification and police killings.
+Examined the relationship between economic inequality, race, and gentrification and police killings.
 
 \textbf{1\textsuperscript{st} Place, \href{https://www.pearson.com/content/dam/global-store/en-us/resources/StatCrunch-Contest-Terms-Conditions-Contests-Pearson-Education-Inc.pdf}{2024 StatCrunch Student Contest}} \hfill May 2024\\
 Placed \#1 in the StatCrunch statistics contest (\$\thinspace{}1,000).\\
