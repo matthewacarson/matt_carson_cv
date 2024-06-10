@@ -302,3 +302,4 @@ TSWLatexianTemp*
 
 # Specifically exclude
 not_using
+.Rhistory
