@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'matt_carson_cv.tex'
+  workflow_dispatch:
 
 jobs:
   build:
