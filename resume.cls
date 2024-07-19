@@ -43,7 +43,7 @@
 
 %\pagestyle{empty} % Suppress headers and footers on all pages
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 \usepackage{fontawesome5} % Package for icons
 
