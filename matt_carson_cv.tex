@@ -27,16 +27,10 @@
 %	draft
 ]{resume} % Use the resume class
 
-%\usepackage{ebgaramond} % Use the EB Garamond font
-\usepackage{fancyhdr}
-\usepackage{lastpage}
 %\renewcommand{\labelitemi}{-} % Redefine the itemize label to use dashes
 %--------------------------------------------------------------------
 %	MARGINS
 %--------------------------------------------------------------------
-
-\usepackage{geometry} % Required for adjusting page dimensions and margins
-
 \geometry{
 	top=1in, % Top margin
 	bottom=1in, % Bottom margin
@@ -68,84 +62,98 @@
 %------------------------------------------------
 \name{Matthew Carson} % Your name to appear at the top
 
-% You can use the \address command up to 3 times for 3 different addresses 
+% You can use the \address command up to 3 times for three different addresses 
 % or pieces of contact information.
 % Any new lines (\\) you use in the \address commands will be converted to 
-% symbols, so each address will appear as a single line.
+% symbols so that each address will appear as a single line.
 
 %\address{Los Angeles, CA 90024} % Main address
 
 \address{
-\href{tel:9255650297}{\faIcon{phone-alt} (925) 565-0297} 
-\href{mailto:carsonmatt@ucla.edu}{\faIcon{envelope} carsonmatt@ucla.edu}
-\href{http://matthewacarson.github.io}{\faIcon{link} matthewacarson.github.io}
+\href{mailto:carsonmatt@ucla.edu}{carsonmatt@ucla.edu} \textbullet{} % \faIcon{envelope} carsonmatt@ucla.edu}
+\href{tel:9255650297}{(925) 565-0297} \textbullet{} % \faIcon{phone-alt} (925) 565-0297} 
+\href{http://matthewacarson.github.io}{matthewacarson.github.io} % \faIcon{link} matthewacarson.github.io}
 }
 
 %\address{\href{http://matthewacarson.github.io}{\faIcon{link} matthewacarson.github.io}}
 %--------------------------------------------------------------------
+\newcommand{\righthandindent}{1.25in}
 
 \begin{document}
 \thispagestyle{firstpagestyle}
 %--------------------------------------------------------------------
 %	RESEARCH INTERESTS SECTION
 %--------------------------------------------------------------------
-%\begin{samepage}
-%\begin{rSection}{Research Interests}
-%\begin{tabular}{@{} l @{\hspace{15ex}} l  @{\hspace{15ex}} l @{}}
-%Organized labor 		& Incarceration 		& Historical methods \\
-%Political economy 	& Police violence 		& Quantitative methods
-%\end{tabular}
-%\end{rSection}
-%\end{samepage}
+\begin{rSection}{Research Interests}
+\begin{tabular}{@{} p{30mm} @{\hspace{1ex}} p{13cm} @{} } 
+\textbf{Substantive:} & organized labor \& social movements; urban sociology \& policy; gentrification; political economy; incarceration \& police violence; race/racism, nationalism \& ``groupism.''\\  
+\textbf{Methods:} & historical; comparative; quantitative; causal inference with observational data; mixed methods.
+\end{tabular}
+
+\end{rSection}
 
 %--------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Education}
-	
-    \textbf{University of California, Los Angeles}\hfill June 2024\\
-    \hspace*{20pt}Bachelor of Arts\\
-    \hspace*{40pt}Sociology (departmental honors) \\
-    \hspace*{40pt}Political Science (highest departmental honors)
-        
-% Honors from the college
-\hspace*{20pt}\textit{College Honors}\\
-\hspace*{20pt}\textit{Summa Cum Laude}
+
+% UCLA Section
+\textbf{University of California, Los Angeles}\hfill June 2024
+\vspace{-6pt}
+\begin{adjustwidth}{20pt}{0pt}
+Bachelor of Arts\\
+Sociology (departmental honors) \\
+Political Science (highest departmental honors)
+
+% College Honors
+College honors\\
+\textit{Summa cum laude}
 
 % Political Science Thesis
-\begin{list}{}{\leftmargin=20pt \itemsep=0pt \parsep=0pt}
-    \item Political Science Best Honors Thesis Prize
-    \begin{list}{}{\leftmargin=20pt \itemsep=0pt \parsep=0pt}
-        \item ``The Policing of the `Reserve Army\': Economic Inequality and Police Killings." \href{https://bit.ly/PolSciThesis}{https://bit.ly/PolSciThesis}
-    \end{list}
-\end{list}
+\textbf{Political Science Best Honors Thesis Prize}
+\begin{adjustwidth}{0pt}{\righthandindent} % Indent left by 40pt, indent right by 1in
+\vspace{-6pt}
+``The Policing of the `Reserve Army': Economic Inequality and Police 
+\hspace*{0.5in}Killings." \href{https://bit.ly/PolSciThesis}{https://bit.ly/PolSciThesis}
+\end{adjustwidth}
 
 % Sociology Thesis
-\begin{list}{}{\leftmargin=20pt \itemsep=0pt \parsep=0pt}
-    \item Sociology Best Honors Thesis: Lisa Mederos Memorial Prize
-    \begin{list}{}{\leftmargin=20pt \itemsep=0pt \parsep=0pt}
-        \item ``Construction Union Agreements: Union Organizing in Historical-Comparative Perspective." \href{https://bit.ly/SocThesis}{https://bit.ly/SocThesis}
-    \end{list}
-\end{list}
+\textbf{Sociology Best Honors Thesis: Lisa Mederos Memorial Prize}
+\begin{adjustwidth}{0pt}{\righthandindent}
+\vspace{-6pt}
+``Construction Union Agreements: Union Organizing in Historical-
+\hspace*{0.5in}Comparative Perspective." \href{https://bit.ly/SocThesis}{https://bit.ly/SocThesis}
+\end{adjustwidth}
 
-\textbf{\href{https://www.losmedanos.edu/}{Los Medanos College}} \hfill August 2022\\ 
-\hspace*{20pt}Associate of Arts in Liberal Arts: Behavioral Science \& Social Science, With Honors\\
-\hspace*{20pt}Associate of Arts in Sociology, With Honors
+\end{adjustwidth}
 
-\textbf{\href{https://www.dvc.edu/}{Diablo Valley College}} \hfill August 2022\\ 
-\hspace*{20pt}Associate of Arts in Political Science for Transfer, With Honors
+% Los Medanos Section
+    \textbf{\href{https://www.losmedanos.edu/}{Los Medanos College}} \hfill August 2022 
+\begin{adjustwidth}{20pt}{\righthandindent}
+    \vspace{-6pt}
+    Associate of Arts in Sociology, With Honors\\
+    Associate of Arts in Liberal Arts: Behavioral Science \& Social Science, With Honors
+\end{adjustwidth}
 
-\href{https://ua342.org/training}{\textbf{United Association Local 342 JATC}} \hfill July 2013\\
-\hspace*{20pt}Certificate in Plumbing (5-year apprenticeship)
+% Diablo Valley Section
+    \textbf{\href{https://www.dvc.edu/}{Diablo Valley College}} \hfill August 2022
+\begin{adjustwidth}{20pt}{\righthandindent}
+    \vspace{-6pt}
+    Associate of Arts in Political Science for Transfer, With Honors
+\end{adjustwidth}
+
+% Plumbing Certificate Section
+    \href{https://ua342.org/training}{\textbf{United Association Local 342 JATC}} \hfill July 2013
+\begin{adjustwidth}{20pt}{\righthandindent}
+    \vspace{-6pt}
+    Certificate in Plumbing (5-year apprenticeship)
+\end{adjustwidth}
 
 \end{rSection}
-\end{samepage}
 
 %--------------------------------------------------------------------
 %	AWARDS AND SCHOLARSHIPS SECTION
 %--------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Awards and Scholarships}
 
 \textbf{1\textsuperscript{st} Place, 2024 StatCrunch Student Contest} \hfill May 2024\\
@@ -153,17 +161,20 @@
 \hspace*{20pt}\href{https://bit.ly/StatCrunchWinners}{https://bit.ly/StatCrunchWinners}
 
 \href{https://hass.ugresearch.ucla.edu/scholarships/ursp/students/}{\textbf{Undergraduate Research Scholars Program (URSP)}} \hfill September 2023 \\
-\hspace*{20pt}Scholarship for senior thesis in sociology (\$\thinspace{}6,000).
+\hspace*{20pt}Scholarship for senior thesis in sociology (\$\thinspace{}6,000).\\
+\hspace*{20pt}\href{https://hass.ugresearch.ucla.edu/scholarships/ursp/}{https://hass.ugresearch.ucla.edu/scholarships/ursp/}
 
-\href{https://www.losmedanos.edu/honors/prog.aspx\#:~:text=Honors\%20Scholar\%20Requirements}{\textbf{Honors Scholar}, Los Medanos College} \hfill May 2020 \\
-\hspace*{20pt}Received the college’s highest distinction
+\Needspace{1\baselineskip}
+\href{https://www.losmedanos.edu/honors/prog.aspx\#:~:text=Honors\%20Scholar\%20Requirements}{\textbf{Honors Scholar}, Los Medanos College} \hfill May 2020\\
+% \begin{adjustwidth}{20pt}{\righthandindent}
+% \vspace{-6pt}
+\hspace*{20pt}Received the college’s highest distinction.\\
+\hspace*{20pt}\href{https://www.losmedanos.edu/honors/prog.aspx}{https://www.losmedanos.edu/honors/prog.aspx}
+% \end{adjustwidth}
 \end{rSection}
-\end{samepage}
-
 %--------------------------------------------------------------------
 %	RESEARCH EXPERIENCE SECTION
 %--------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Research Experience}
 %\textbf{Departmental Honors Program in Sociology} \hfill June 2024\\
 %“Construction Union Agreements: Union Organizing in Historical-Comparative Perspective"
@@ -177,37 +188,30 @@
 \href{https://www.workingclasspolitics.org/}{\textbf{The Center for Working Class Politics}}\hfill 7/2024--Present\\
 \hspace*{20pt}Research Assistant
 
-% \textbf{Research Assistant}, Harvard Sociology\hfill 6/2023--9/2023\\
-% Worked with Professor Adaner Usmani on a project analyzing prison conditions and their relationship with the broader labor market and the precariousness of work in the region.
-
 \textbf{Undergraduate Research Experience}, UCLA Political Science\hfill Fall 2022\\
 \hspace*{20pt}Assisted a graduate student with data collection for a political psychology\\ 
 \hspace*{20pt}experiment in the Race, Ethnicity, and Politics subdiscipline.
 
 \href{https://bayhonors.org/}{\textbf{Bay Honors Research Symposium}} \hfill  April 2020\\
 \hspace*{20pt}Accepted to give a presentation about eminent domain and global warming; canceled\\
-\hspace*{20pt}because of COVID-19. (See ‘Published Works’ section for the corresponding paper.)
+\hspace*{20pt}because of COVID-19. (See the ‘Published Works’ section for the corresponding paper.)
 
 \end{rSection}
-\end{samepage}
 %--------------------------------------------------------------------
 %	PUBLISHED WORKS SECTION
 %--------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Published Works}
 “Global Warming and the Takings Clause: Can Eminent Domain Be\hfill 11/01/2023 \\
 Used to Avert a Climate Crisis?” \textit{ThinkYou?!} https://bit.ly/CarsonThinkYou
 
 “Engines Out and Pickets Up to Stop Health Plan Downgrade by Cummins.” \hfill 6/21/2021 \\
-\textit{Labor Notes} (with Keith Brower Brown, and Ella Teevan). https://bit.ly/EnginesOut
+\textit{Labor Notes} (with Keith Brower Brown and Ella Teevan). https://bit.ly/EnginesOut
 
 \end{rSection}
-\end{samepage}
 
 %----------------------------------------------------------------------------------------
 %	RELEVANT COURSEWORK SECTION
 %----------------------------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Relevant Coursework}
 
 \begin{tabular}{@{} >{}l @{\hspace{8ex}} l @{}}
@@ -220,13 +224,12 @@ Political Science 191H				& Research Design Seminar for Honors Thesis
 \end{tabular}
 
 \end{rSection}
-\end{samepage}
 
 %----------------------------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Languages and Technical Strengths}
+
 	\begin{tabular}{@{} >{\bfseries}l @{\hspace{4.9ex}} l @{}}
 		Spoken/Written 					& Spanish (limited reading and speaking) \\
 		Programming 						& \texttt{{\large R}}{\scriptsize **}, Python{\scriptsize *}, Stata{\scriptsize *}, \LaTeX{{\scriptsize *}} \\
@@ -236,12 +239,10 @@ Political Science 191H				& Research Design Seminar for Honors Thesis
 	
 {\scriptsize *}{\small Working knowledge;} {\scriptsize **}{\small Intermediate;} {\scriptsize ***}{\small Intermediate-advanced.}
 \end{rSection}
-\end{samepage}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\begin{samepage}
 \begin{rSection}{Employment}
 	
 	\begin{rSubsection}{\href{https://www.unitehere11.org/}{UNITE HERE Local 11}}{4/2022--6/2022}{Election Canvasser}{Los Angeles, CA}
@@ -253,12 +254,10 @@ Political Science 191H				& Research Design Seminar for Honors Thesis
 	\end{rSubsection}
 
 \end{rSection}
-\end{samepage}
 
 %----------------------------------------------------------------------------------------
 %	PROFESSIONAL REFERENCES
 %----------------------------------------------------------------------------------------
-
 \begin{rSection}{Professional References}
 
 Chris Tausanovitch (political science thesis advisor) \hfill \href{mailto:ctausanovitch@ucla.edu}{ctausanovitch@ucla.edu}\\

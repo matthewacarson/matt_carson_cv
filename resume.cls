@@ -51,6 +51,12 @@
 
 \usepackage{multicol}
 
+%\usepackage{ebgaramond} % Use the EB Garamond font
+\usepackage{changepage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+\usepackage{hanging}
 %----------------------------------------------------------------------------------------
 %	NAME AND ADDRESS COMMANDS
 %----------------------------------------------------------------------------------------
@@ -113,18 +119,36 @@
 %----------------------------------------------------------------------------------------
 
 % Defines the rSection environment for the major sections within the CV
+% \newenvironment{rSection}[1]{ % The single parameter is for the section title
+% 	\medskip % Vertical whitespace
+% 	\MakeUppercase{\textbf{#1}} % Section title
+% 	\medskip % Vertical whitespace
+% 	\hrule % Horizontal rule
+% 	\begin{list}{}{ % List to indent the entire content of the section
+% 		\setlength{\leftmargin}{10pt} % Indent to the left of the list
+% 	}
+% 	\item[] % Empty list item to enable indentation
+    
+% }{
+% 	\end{list}
+% }
+
+\usepackage{needspace}
+
 \newenvironment{rSection}[1]{ % The single parameter is for the section title
-	\medskip % Vertical whitespace
-	\MakeUppercase{\textbf{#1}} % Section title
-	\medskip % Vertical whitespace
-	\hrule % Horizontal rule
-	\begin{list}{}{ % List to indent the entire content of the section
-		\setlength{\leftmargin}{1.5em} % Indent to the left of the list
-	}
-	\item[] % Empty list item to enable indentation
+    \Needspace{5\baselineskip} % Ensure at least 3 lines stay together
+    \medskip % Vertical whitespace
+    \MakeUppercase{\textbf{#1}} % Section title
+    \medskip % Vertical whitespace
+    \hrule % Horizontal rule
+    \begin{list}{}{ % List to indent the entire content of the section
+        \setlength{\leftmargin}{1ex} % Indent to the left of the list
+    }
+    \item[] % Empty list item to enable indentation
 }{
-	\end{list}
+    \end{list}
 }
+
 
 %----------------------------------------------------------------------------------------
 %	SUBSECTION FORMATTING
