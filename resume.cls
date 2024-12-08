@@ -32,31 +32,45 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES AND MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
 \usepackage[parfill]{parskip} % Remove paragraph indentation
-
 \usepackage{array} % Required for bold tabular columns
-
 \usepackage{ifthen} % Required for ifthenelse statements
-
 \usepackage{graphicx} % Required for including images
-
 %\pagestyle{empty} % Suppress headers and footers on all pages
-
 \usepackage[hidelinks]{hyperref}
-
 \usepackage{fontawesome5} % Package for icons
-
 \usepackage{textcomp}
-
 \usepackage{multicol}
-
 %\usepackage{ebgaramond} % Use the EB Garamond font
 \usepackage{changepage}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{geometry} % Required for adjusting page dimensions and margins
-\usepackage{hanging}
+\usepackage{booktabs}
+\usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
+% \usepackage{filecontents} % To create an inline .bib file
+
+\begin{filecontents}{publication.bib}
+@article{carson2023globalwarming,
+  title={Global Warming and the Takings Clause: Can Eminent Domain Be Used to Avert a Climate Crisis?},
+  author={Carson, Matthew},
+  journal={ThinkYou?!},
+  year={2023},
+  url={https://bit.ly/CarsonThinkYou},
+  month={11}
+}
+
+@article{carson2021enginesout,
+  title={Engines Out and Pickets Up to Stop Health Plan Downgrade by Cummins},
+  author={Carson, Matt and Brower Brown, Keith and Teevan, Ella},
+  journal={Labor Notes},
+  year={2021},
+  url={https://bit.ly/EnginesOut},
+  month={6}
+}
+\end{filecontents}
+
+\addbibresource{publication.bib} % Link to the .bib file
 %----------------------------------------------------------------------------------------
 %	NAME AND ADDRESS COMMANDS
 %----------------------------------------------------------------------------------------
