@@ -142,7 +142,7 @@
     \medskip % Vertical whitespace
     \hrule % Horizontal rule
     \begin{list}{}{ % List to indent the entire content of the section
-        \setlength{\leftmargin}{1ex} % Indent to the left of the list
+        \setlength{\leftmargin}{1pt} % Indent to the left of the list
     }
     \item[] % Empty list item to enable indentation
 }{
