@@ -47,7 +47,9 @@
 \usepackage{lastpage}
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 \usepackage{booktabs}
-\usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
+% \usepackage{bibentry} % For inline bibliography entries
+% \usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
+\usepackage[sorting=ydnt]{biblatex}
 % \usepackage{filecontents} % To create an inline .bib file
 
 \begin{filecontents}{publication.bib}
@@ -71,6 +73,14 @@
 \end{filecontents}
 
 \addbibresource{publication.bib} % Link to the .bib file
+
+\nocite{*} % Include all entries from the .bib file
+
+% Reverse numbering in publications list
+\newcounter{entrycount}
+\AtDataInput{\stepcounter{entrycount}}
+\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
+\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
 %----------------------------------------------------------------------------------------
 %	NAME AND ADDRESS COMMANDS
 %----------------------------------------------------------------------------------------
