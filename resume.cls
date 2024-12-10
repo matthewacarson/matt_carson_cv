@@ -160,7 +160,7 @@
 \usepackage{needspace}
 
 \newenvironment{rSection}[1]{ % The single parameter is for the section title
-    \Needspace{5\baselineskip} % Ensure at least 3 lines stay together
+    \Needspace{5\baselineskip} % Ensure at least 5 lines stay together
     \medskip % Vertical whitespace
     \MakeUppercase{\textbf{#1}} % Section title
     \medskip % Vertical whitespace
@@ -171,23 +171,4 @@
     \item[] % Empty list item to enable indentation
 }{
     \end{list}
-}
-
-
-%----------------------------------------------------------------------------------------
-%	SUBSECTION FORMATTING
-%----------------------------------------------------------------------------------------
-
-\newenvironment{rSubsection}[4]{ % 4 parameters: company name, year(s) employed, job title and location
-	\textbf{#1} \hfill {#2} % Bold company name and date to the right
-	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output the job title and location line
-		\\ % Job title and location on a new line
-		\textit{#3} \hfill \textit{#4} % Output job title and location
-	}%
-	\smallskip % Vertical whitespace
-	\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-		\setlength{\itemsep}{-0.5em} \vspace{-0.5em} % Reduce vertical spacing between items in the list for a tighter look
-}{
-	\end{list}
-	\vspace{0.5em} % Vertical whitespace after the end of the list
 }
