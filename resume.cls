@@ -37,6 +37,7 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{graphicx} % Required for including images
 %\pagestyle{empty} % Suppress headers and footers on all pages
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fontawesome5} % Package for icons
 \usepackage{textcomp}
