@@ -38,7 +38,7 @@
 \usepackage{graphicx} % Required for including images
 %\pagestyle{empty} % Suppress headers and footers on all pages
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[pdfauthor={Matthew A. Carson}, pdftitle={Matthew A. Carson CV}, pdfsubject={Curriculum Vitae}, pdfkeywords={Curriculum Vitae, CV, Vita}, pdfdisplaydoctitle=true, hidelinks]{hyperref}
 \usepackage{fontawesome5} % Package for icons
 \usepackage{textcomp}
 \usepackage{multicol}
@@ -48,9 +48,10 @@
 \usepackage{lastpage}
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 \usepackage{booktabs}
+\usepackage[sorting=ydnt]{biblatex}
+\usepackage{needspace}
 % \usepackage{bibentry} % For inline bibliography entries
 % \usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
-\usepackage[sorting=ydnt]{biblatex}
 % \usepackage{filecontents} % To create an inline .bib file
 
 \begin{filecontents}{publication.bib}
@@ -158,7 +159,6 @@
 % 	\end{list}
 % }
 
-\usepackage{needspace}
 
 \newenvironment{rSection}[1]{ % The single parameter is for the section title
     \Needspace{5\baselineskip} % Ensure at least 5 lines stay together
