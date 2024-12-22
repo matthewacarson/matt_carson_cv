@@ -49,27 +49,24 @@
 \fancypagestyle{firstpagestyle}{
     \fancyhf{} % clear all header and footer fields
     % \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{bit.ly/CarsonCV}}
-    \fancyhead[C]{\newline\vfill\printname}
+    \fancyhead[C]{\newline\vfill}
     \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
     \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{Updated: \the\month/\the\day/\the\year}}
 }
 %------------------------------------------------
-\name{Matthew A. Carson} % Your name to appear at the top
+% \name{Matthew A. Carson} % Your name to appear at the top
 
 % You can use the \address command up to 3 times for three different addresses 
 % or pieces of contact information.
 % Any new lines (\\) you use in the \address commands will be converted to 
 % symbols so that each address will appear as a single line.
+% \faIcon{envelope}
+% \faIcon{phone-alt}
+% \faIcon{link}
 
-%\address{Los Angeles, CA 90024} % Main address
-
-\address{
-\href{mailto:carsonmatt@ucla.edu}{\texttt{carsonmatt@ucla.edu}  } \textbf{$|$} % \faIcon{envelope} carsonmatt@ucla.edu}
-\href{tel:9255650297}{  \texttt{(925) 565-0297}  } \textbf{$|$} % \faIcon{phone-alt} (925) 565-0297} 
-\href{http://matthewacarson.github.io}{  \texttt{matthewacarson.github.io}} % \faIcon{link} matthewacarson.github.io}
-}
-
-\address{\href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}
+% \address{
+% }
+% \address{\href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}
 %--------------------------------------------------------------------
 \newcommand{\righthandindent}{1in}
 \tolerance=1
@@ -78,6 +75,14 @@
 \hbadness=10000
 
 \begin{document}
+
+\centerline{\MakeUppercase{\huge\bfseries{Matthew A. Carson}}}
+\href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}\hfill\\
+\href{tel:9255650297}{Phone: \texttt{(925) 565-0297}}\hfill\\
+\centerline{\href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \hfill \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}
+
+
+
 \thispagestyle{firstpagestyle}
 \raggedright
 \renewcommand{\labelitemi}{\scriptsize$\bullet$}

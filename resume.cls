@@ -18,9 +18,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------
 %	CLASS CONFIGURATION
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------
 
 \ProvidesClass{resume}[2022/12/17 v3.0 Resume class]
 
@@ -29,9 +29,10 @@
 
 \LoadClass{article} % Load the base class
 
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------
 %	REQUIRED PACKAGES AND MISC CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------
+\usepackage{setspace}
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for bold tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
@@ -54,6 +55,9 @@
 % \usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
 % \usepackage{filecontents} % To create an inline .bib file
 
+%---------------------------------------------------------------
+% Bibliographic entries
+%---------------------------------------------------------------
 \begin{filecontents}{publication.bib}
 @article{carson2023globalwarming,
   title={Global Warming and the Takings Clause: Can Eminent Domain Be Used to Avert a Climate Crisis?},
@@ -83,83 +87,67 @@
 \AtDataInput{\stepcounter{entrycount}}
 \DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
 \newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------
 %	NAME AND ADDRESS COMMANDS
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------
 
 \newcommand{\name}[1]{\renewcommand{\name}{#1}} % Defines the \name command to set the user's name
 
-\newcommand{\addressSep}{$\diamond$} % Set default address separator to a diamond symbol
+% \newcommand{\addressSep}{$\diamond$} % Set default address separator to a diamond symbol
 
-% One, two or three address lines can be specified
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
+% % One, two or three address lines can be specified
+% \let \@addressone \relax
+% \let \@addresstwo \relax
+% \let \@addressthree \relax
 
-% The \address command is used to set the first, second and third address lines (the last 2 are optional)
-\newcommand{\address}[1]{
-	\@ifundefined{@addressone}{ % If the first address line has not been set yet, set it
-		\def \@addressone {#1}
-	}{
-		\@ifundefined{@addresstwo}{ % If the second address line has not been set yet, set it
-			\def \@addresstwo {#1}
-		}{ % Otherwise, set the third address line
-			\def \@addressthree {#1}
-		}%
-	}
-}
-
-% \printaddress is used to style an address line (provided in the single parameter to the command)
-\newcommand{\printaddress}[1]{
-	\begingroup
-		\def \\ {\addressSep\ } % Redefine newlines (\\) to the address separator symbol so multiple lines of each address are output as a single line
-		\centerline{#1} % Output the centered address line
-	\endgroup
-	\par % End the paragraph to ensure correct spacing between lines
-	\smallskip % Vertical whitespace between address lines
-}
-
-% \printname is used to output the user's name in a large size
-\newcommand{\printname}{
-	\begingroup
-		\hfil{\MakeUppercase{\huge\bfseries\name}}\hfil % Style and output the user's name
-		\bigskip\break % Vertical whitespace below name
-	\endgroup
-}
-
-%----------------------------------------------------------------------------------------
-%	OUTPUT THE NAME & ADDRESS LINES AUTOMATICALLY
-%----------------------------------------------------------------------------------------
-
-\let\ori@document=\document % Store the original \document command
-\renewcommand{\document}{
-	\ori@document  % Output the original \document command but add to it below
-%	\printname % Output the user's name
-	\@ifundefined{@addressone}{}{\printaddress{\@addressone}} % Output the first address if specified
-	\@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}} % Output the second address if specified
-	\@ifundefined{@addressthree}{}{\printaddress{\@addressthree}} % Output the third address if specified
-}
-
-%----------------------------------------------------------------------------------------
-%	SECTION FORMATTING
-%----------------------------------------------------------------------------------------
-
-% Defines the rSection environment for the major sections within the CV
-% \newenvironment{rSection}[1]{ % The single parameter is for the section title
-% 	\medskip % Vertical whitespace
-% 	\MakeUppercase{\textbf{#1}} % Section title
-% 	\medskip % Vertical whitespace
-% 	\hrule % Horizontal rule
-% 	\begin{list}{}{ % List to indent the entire content of the section
-% 		\setlength{\leftmargin}{10pt} % Indent to the left of the list
+% % The \address command is used to set the first, second and third address lines (the last 2 are optional)
+% \newcommand{\address}[1]{
+% 	\@ifundefined{@addressone}{ % If the first address line has not been set yet, set it
+% 		\def \@addressone {#1}
+% 	}{
+% 		\@ifundefined{@addresstwo}{ % If the second address line has not been set yet, set it
+% 			\def \@addresstwo {#1}
+% 		}{ % Otherwise, set the third address line
+% 			\def \@addressthree {#1}
+% 		}%
 % 	}
-% 	\item[] % Empty list item to enable indentation
-    
-% }{
-% 	\end{list}
 % }
 
+% % \printaddress is used to style an address line (provided in the single parameter to the command)
+% \newcommand{\printaddress}[1]{
+% 	\begingroup
+% 		% \def \\ {\addressSep\ } % Redefine newlines (\\) to the address separator symbol so multiple lines of each address are output as a single line
+% 		% \centerline{#1} % Output the centered address line
+%         #1
+% 	\endgroup
+% 	% \par% End the paragraph to ensure correct spacing between lines
+% 	% \smallskip % Vertical whitespace between address lines
+% }
 
+% % \printname is used to output the user's name in a large size
+% \newcommand{\printname}{
+% 	\begingroup
+% 		\centerline{\MakeUppercase{\huge\bfseries\name}} % Style and output the user's name
+% 		% \bigskip\break % Vertical whitespace below name
+% 	\endgroup
+% }
+
+%---------------------------------------------------------------
+%	OUTPUT THE NAME & ADDRESS LINES AUTOMATICALLY
+%---------------------------------------------------------------
+
+% \let\ori@document=\document % Store the original \document command
+% \renewcommand{\document}{
+% 	\ori@document  % Output the original \document command but add to it below
+% 	\printname % Output the user's name
+% 	\@ifundefined{@addressone}{}{\printaddress{\@addressone}} % Output the first address if specified
+% 	\@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}} % Output the second address if specified
+% 	\@ifundefined{@addressthree}{}{\printaddress{\@addressthree}} % Output the third address if specified
+% }
+
+%---------------------------------------------------------------
+%	SECTION FORMATTING
+%---------------------------------------------------------------
 \newenvironment{rSection}[1]{ % The single parameter is for the section title
     \Needspace{5\baselineskip} % Ensure at least 5 lines stay together
     \medskip % Vertical whitespace
