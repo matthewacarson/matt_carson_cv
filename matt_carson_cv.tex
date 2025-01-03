@@ -38,35 +38,22 @@
 %--------------------------------------------------------------------
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{Carson, \textit{vita}}
+\fancyhead[L]{Carson, \textit{vita}}
 % \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{bit.ly/CarsonCV}}
 \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
 %\fancyfoot[L]{Carson, \textit{vita}}
-\fancyfoot[L]{\href{https://bit.ly/CarsonCV}{Updated: \the\month/\the\day/\the\year}}
+\fancyfoot[L]{\href{https://bit.ly/CarsonCV}{\the\month/\the\day/\the\year}}
 \renewcommand{\headrulewidth}{0pt} % header rule
 
 % Define a custom page style for the first page
 \fancypagestyle{firstpagestyle}{
     \fancyhf{} % clear all header and footer fields
     % \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{bit.ly/CarsonCV}}
-    \fancyhead[C]{\newline\vfill}
+    \fancyhead[L]{Curriculum Vitae}
     \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
-    \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{Updated: \the\month/\the\day/\the\year}}
+    \fancyhead[R]{\href{https://bit.ly/CarsonCV}{Updated: \the\month/\the\day/\the\year}}
 }
-%------------------------------------------------
-% \name{Matthew A. Carson} % Your name to appear at the top
 
-% You can use the \address command up to 3 times for three different addresses 
-% or pieces of contact information.
-% Any new lines (\\) you use in the \address commands will be converted to 
-% symbols so that each address will appear as a single line.
-% \faIcon{envelope}
-% \faIcon{phone-alt}
-% \faIcon{link}
-
-% \address{
-% }
-% \address{\href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}
 %--------------------------------------------------------------------
 \newcommand{\righthandindent}{1in}
 \tolerance=1
@@ -74,13 +61,26 @@
 \hyphenpenalty=10000
 \hbadness=10000
 
+\newboolean{fullVersion}
+\setboolean{fullVersion}{true} % Set to true or false
+
+\newboolean{includeGPA}
+\setboolean{includeGPA}{true} % Set to true or false
+
+\newboolean{includeReferences}
+\setboolean{includeReferences}{true} % Set to true or false
+
 \begin{document}
 
 \centerline{\MakeUppercase{\huge\bfseries{Matthew A. Carson}}}
-\href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}\\
-\href{tel:9255650297}{Phone: \texttt{(925) 565-0297}}\\
-\centerline{\href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \hfill \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}
-
+\bigskip
+\ifthenelse{\boolean{fullVersion}}
+  % If true
+  {\centerline{\href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}\hfill\href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}}}
+  \centerline{\href{tel:9255650297}{Phone: \texttt{(925) 565-0297}}\hfill\href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}}
+  % If false
+  {Email: \texttt{<LastnameFirstname> -at- ucla -dot- edu}\\
+  \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}}}
 
 
 \thispagestyle{firstpagestyle}
@@ -196,9 +196,9 @@ experiment in the Race, Ethnicity, and Politics subdiscipline.
 \printbibliography[title={~}] % Suppress the default "References" title
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 %	RELEVANT COURSEWORK SECTION
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 \begin{rSection}{Relevant Coursework}
 
 \begin{tabular}{@{} >{}l @{\hspace{8ex}} l @{}}
@@ -210,9 +210,9 @@ Political Science 191H				& Research Design Seminar for Honors Thesis
 
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 \begin{rSection}{Languages and Technical Strengths}
 
 	\begin{tabular}{@{} >{\bfseries}l @{\hspace{4.9ex}} l @{}}
@@ -225,9 +225,9 @@ Political Science 191H				& Research Design Seminar for Honors Thesis
 {\scriptsize *}{\small Working knowledge;} {\scriptsize **}{\small Intermediate;} {\scriptsize ***}{\small Intermediate-advanced.}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 \begin{rSection}{Employment}
 	
 \href{https://www.unitehere11.org/}{\textbf{UNITE HERE Local 11}}\hfill{}4/2022--6/2022\\
@@ -238,18 +238,16 @@ Journeyman Plumber\hfill{}\textit{Concord, CA}
 
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 %	PROFESSIONAL REFERENCES
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------
 \begin{rSection}{Professional References}
-
-Chris Tausanovitch (political science thesis advisor) \hfill \href{mailto:ctausanovitch@ucla.edu}{ctausanovitch@ucla.edu}\\
-Zsuzsa Berend (sociology thesis advisor) \hfill \href{mailto:berend@soc.ucla.edu}{berend@soc.ucla.edu}\\
-Adaner Usmani (sociology) \hfill \href{mailto:ausmani@fas.harvard.edu}{ausmani@fas.harvard.edu}\\
-Michelle Torres (political science) \hfill \href{mailto:smtorres@ucla.edu}{smtorres@ucla.edu}\\
-Michael Tsiang (statistics) \hfill \href{mailto:mike@stat.ucla.edu}{mike@stat.ucla.edu}
+\ifthenelse{\boolean{includeReferences}}
+{Chris Tausanovitch (political science thesis advisor)\hfill\href{mailto:ctausanovitch@ucla.edu}{ctausanovitch@ucla.edu}\\
+Zsuzsa Berend (sociology thesis advisor)\hfill\href{mailto:berend@soc.ucla.edu}{berend@soc.ucla.edu}\\
+Adaner Usmani (sociology)\hfill\href{mailto:ausmani@fas.harvard.edu}{ausmani@fas.harvard.edu}\\
+Michael Tsiang (statistics)\hfill\href{mailto:mike@stat.ucla.edu}{mike@stat.ucla.edu}}
+{Available upon request.}
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}

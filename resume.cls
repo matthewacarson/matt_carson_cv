@@ -32,6 +32,7 @@
 %---------------------------------------------------------------
 %	REQUIRED PACKAGES AND MISC CONFIGURATIONS
 %---------------------------------------------------------------
+\usepackage{qrcode}
 \usepackage{setspace}
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for bold tabular columns
@@ -51,6 +52,7 @@
 \usepackage{booktabs}
 \usepackage[sorting=ydnt]{biblatex}
 \usepackage{needspace}
+\usepackage{standalone}
 % \usepackage{bibentry} % For inline bibliography entries
 % \usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
 % \usepackage{filecontents} % To create an inline .bib file
