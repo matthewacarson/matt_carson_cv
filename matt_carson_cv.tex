@@ -51,7 +51,7 @@
     % \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{bit.ly/CarsonCV}}
     \fancyhead[L]{Curriculum Vitae}
     \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
-    \fancyhead[R]{\href{https://bit.ly/CarsonCV}{Updated: \the\month/\the\day/\the\year}}
+    \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{\the\month/\the\day/\the\year}}
 }
 
 %--------------------------------------------------------------------
@@ -61,26 +61,35 @@
 \hyphenpenalty=10000
 \hbadness=10000
 
-\newboolean{fullVersion}
-\setboolean{fullVersion}{true} % Set to true or false
+\newboolean{contactInformation}
+\setboolean{contactInformation}{false} % Set to true or false
 
 \newboolean{includeGPA}
-\setboolean{includeGPA}{true} % Set to true or false
+\setboolean{includeGPA}{false} % Set to true or false
 
 \newboolean{includeReferences}
-\setboolean{includeReferences}{true} % Set to true or false
+\setboolean{includeReferences}{false} % Set to true or false
 
 \begin{document}
 
 \centerline{\MakeUppercase{\huge\bfseries{Matthew A. Carson}}}
 \bigskip
-\ifthenelse{\boolean{fullVersion}}
-  % If true
-  {\centerline{\href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}\hfill\href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}}}
-  \centerline{\href{tel:9255650297}{Phone: \texttt{(925) 565-0297}}\hfill\href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}}}
+\ifthenelse{\boolean{contactInformation}}
+{\begin{table}[h]
+    \centering
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+        \href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}& \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \\
+        \href{tel:9255650297}{Phone: \texttt{(925) 565-0297}}& \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}} \\
+    \end{tabular*}
+\end{table}}
   % If false
-  {Email: \texttt{<LastnameFirstname> -at- ucla -dot- edu}\\
-  \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}}}
+  {\begin{table}[h]
+    \centering
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+        \href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}& \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \\
+        \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}& \\
+    \end{tabular*}
+\end{table}}
 
 
 \thispagestyle{firstpagestyle}
@@ -90,7 +99,64 @@
 %	EDUCATION SECTION
 %--------------------------------------------------------------------
 \begin{rSection}{Education}
-\input{education}
+\setlist[itemize]{itemsep=0pt, topsep=0pt, parsep=0pt, leftmargin=2em}
+\begin{itemize}[leftmargin=0em, itemsep=0pt]
+% UCLA Section
+\item[] \textbf{University of California, Los Angeles}\hfill{}Los Angeles, CA
+\begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \item[] Bachelor of Arts, \textit{With College Honors}\hfill{}6/2024
+    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+        \item[] Sociology, \textit{With Departmental Honors}
+        \item[] Political Science, \textit{With Departmental Highest Honors}
+    \item[] \textit{Summa cum laude}
+    \ifthenelse{\boolean{includeGPA}}
+    {\item[] Cumulative GPA: 4.0}
+    \end{itemize}
+    \vspace{6pt}
+% Political Science Thesis
+\item[] \textbf{Political Science Best Honors Thesis Prize}
+\begin{itemize}[leftmargin=2em, itemsep=0pt, rightmargin=5em]
+    \item[] \href{https://bit.ly/PolSciThesis}{\textit{The Policing of the `Reserve Army': Economic Inequality and Police Killings.} \texttt{https://bit.ly/PolSciThesis}}
+    \item[] Advisor: Chris Tausanovitch
+\end{itemize}
+\vspace{6pt}
+% Sociology Thesis
+\item[] \textbf{Sociology Best Honors Thesis: Lisa Mederos Memorial Prize}
+\begin{itemize}[leftmargin=2em, itemsep=0pt, rightmargin=5em]
+    \item[] \href{https://bit.ly/SocThesis}{\textit{Construction Union Agreements: Union Organizing in Historical-Comparative Perspective.} \texttt{https://bit.ly/SocThesis}}
+    \item[] Advisor: Zsuzsa Berend
+    \end{itemize}
+\end{itemize}
+\vspace{12pt}
+% Los Medanos Section
+\item[] \textbf{\href{https://www.losmedanos.edu/}{Los Medanos College}}\hfill{}Pittsburg, CA
+\begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \item[] Associate in Arts for Transfer\hfill{}8/2022
+    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+        \item[] Sociology, \textit{With Honors}
+        \item[] Liberal Arts: Behavioral Science \& Social Science, \textit{With Honors}
+    \end{itemize}
+    \item[] \href{https://www.losmedanos.edu/honors/prog.aspx}{Honors Scholar} (the college’s highest distinction)
+    \ifthenelse{\boolean{includeGPA}}
+    {\item[] GPA: 4.0 (since 2014) $|$ Cumulative GPA: 3.874}
+\end{itemize}
+\vspace{12pt}
+% Diablo Valley Section
+\item[] \textbf{\href{https://www.dvc.edu/}{Diablo Valley College}}\hfill{}Pleasant Hill, CA
+\begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \item[] Associate in Arts for Transfer\hfill{}8/2022
+    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+        \item[] Political Science, \textit{With Honors}
+    \end{itemize}
+    \item[] Certificate in Plumbing (5-year apprenticeship)\hfill{}7/2013
+    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+        \item[] Offered in collaboration with United Association Local 342
+    \end{itemize}
+    \ifthenelse{\boolean{includeGPA}}
+    {\item[] GPA: 4.0 (since 2014) $|$ Cumulative GPA: 3.566}
+\end{itemize}
+\end{itemize}
+
 \end{rSection}
 
 %--------------------------------------------------------------------
