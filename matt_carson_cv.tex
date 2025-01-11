@@ -62,13 +62,13 @@
 \hbadness=10000
 
 \newboolean{contactInformation}
-\setboolean{contactInformation}{false} % Set to true or false
+\setboolean{contactInformation}{true} % Set to true or false
 
 \newboolean{includeGPA}
 \setboolean{includeGPA}{false} % Set to true or false
 
 \newboolean{includeReferences}
-\setboolean{includeReferences}{false} % Set to true or false
+\setboolean{includeReferences}{true} % Set to true or false
 
 \begin{document}
 
@@ -86,7 +86,7 @@
   {\begin{table}[h]
     \centering
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-        \href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}& \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \\
+        \href{mailto:matt-carson@snkml.com}{Email: \texttt{matt-carson@snkml.com}}& \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \\
         \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}& \\
     \end{tabular*}
 \end{table}}
@@ -99,61 +99,58 @@
 %	EDUCATION SECTION
 %--------------------------------------------------------------------
 \begin{rSection}{Education}
-\setlist[itemize]{itemsep=0pt, topsep=0pt, parsep=0pt, leftmargin=2em}
+\setlist[itemize]{itemsep=0pt, topsep=0pt, parsep=0pt}
 \begin{itemize}[leftmargin=0em, itemsep=0pt]
 % UCLA Section
 \item[] \textbf{University of California, Los Angeles}\hfill{}Los Angeles, CA
-\begin{itemize}[leftmargin=2em, itemsep=0pt]
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Bachelor of Arts, \textit{With College Honors}\hfill{}6/2024
-    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \begin{itemize}[leftmargin=1em, itemsep=0pt]
         \item[] Sociology, \textit{With Departmental Honors}
         \item[] Political Science, \textit{With Departmental Highest Honors}
     \item[] \textit{Summa cum laude}
-    \ifthenelse{\boolean{includeGPA}}
-    {\item[] Cumulative GPA: 4.0}
+    \item[] Cumulative GPA: 4.0
     \end{itemize}
     \vspace{6pt}
 % Political Science Thesis
 \item[] \textbf{Political Science Best Honors Thesis Prize}
-\begin{itemize}[leftmargin=2em, itemsep=0pt, rightmargin=5em]
-    \item[] \href{https://bit.ly/PolSciThesis}{\textit{The Policing of the `Reserve Army': Economic Inequality and Police Killings.} \texttt{https://bit.ly/PolSciThesis}}
+\begin{itemize}[leftmargin=1em, itemsep=0pt, rightmargin=6em]
+    \item[] \href{https://bit.ly/PoliSciSample}{\textit{The Policing of the `Reserve Army': Economic Inequality and Police Killings.} Writing sample: \texttt{https://bit.ly/PoliSciSample}}
     \item[] Advisor: Chris Tausanovitch
 \end{itemize}
 \vspace{6pt}
 % Sociology Thesis
 \item[] \textbf{Sociology Best Honors Thesis: Lisa Mederos Memorial Prize}
-\begin{itemize}[leftmargin=2em, itemsep=0pt, rightmargin=5em]
-    \item[] \href{https://bit.ly/SocThesis}{\textit{Construction Union Agreements: Union Organizing in Historical-Comparative Perspective.} \texttt{https://bit.ly/SocThesis}}
+\begin{itemize}[leftmargin=1em, itemsep=0pt, rightmargin=5em]
+    \item[] \href{https://bit.ly/SocSample}{\textit{Construction Union Agreements: Union Organizing in Historical- Comparative Perspective.} Writing sample: \texttt{https://bit.ly/SocSample}}
     \item[] Advisor: Zsuzsa Berend
     \end{itemize}
 \end{itemize}
 \vspace{12pt}
 % Los Medanos Section
 \item[] \textbf{\href{https://www.losmedanos.edu/}{Los Medanos College}}\hfill{}Pittsburg, CA
-\begin{itemize}[leftmargin=2em, itemsep=0pt]
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Associate in Arts for Transfer\hfill{}8/2022
-    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \begin{itemize}[leftmargin=1em, itemsep=0pt]
         \item[] Sociology, \textit{With Honors}
         \item[] Liberal Arts: Behavioral Science \& Social Science, \textit{With Honors}
     \end{itemize}
     \item[] \href{https://www.losmedanos.edu/honors/prog.aspx}{Honors Scholar} (the college’s highest distinction)
-    \ifthenelse{\boolean{includeGPA}}
-    {\item[] GPA: 4.0 (since 2014) $|$ Cumulative GPA: 3.874}
+   \item[] GPA: 4.0 (since 2014) $|$ Cumulative GPA: 3.874
 \end{itemize}
 \vspace{12pt}
 % Diablo Valley Section
 \item[] \textbf{\href{https://www.dvc.edu/}{Diablo Valley College}}\hfill{}Pleasant Hill, CA
-\begin{itemize}[leftmargin=2em, itemsep=0pt]
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Associate in Arts for Transfer\hfill{}8/2022
-    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \begin{itemize}[leftmargin=1em, itemsep=0pt]
         \item[] Political Science, \textit{With Honors}
     \end{itemize}
     \item[] Certificate in Plumbing (5-year apprenticeship)\hfill{}7/2013
-    \begin{itemize}[leftmargin=2em, itemsep=0pt]
+    \begin{itemize}[leftmargin=1em, itemsep=0pt]
         \item[] Offered in collaboration with United Association Local 342
     \end{itemize}
-    \ifthenelse{\boolean{includeGPA}}
-    {\item[] GPA: 4.0 (since 2014) $|$ Cumulative GPA: 3.566}
+    \item[] GPA: 4.0 (since 2014) $|$ Cumulative GPA: 3.566
 \end{itemize}
 \end{itemize}
 
@@ -178,7 +175,7 @@
 \href{https://bit.ly/StatCrunchWinners}{\textbf{1\textsuperscript{st} Place, 2024 StatCrunch Student Contest}}\hfill{}5/2024
 \begin{adjustwidth}{0pt}{\righthandindent}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Placed \#1 in the StatCrunch statistics contest (\$\thinspace{}1,000).
     \vspace{-7pt}
     \item[] \href{https://bit.ly/StatCrunchWinners}{\texttt{https://bit.ly/StatCrunchWinners}}
@@ -189,7 +186,7 @@
 \href{https://hass.ugresearch.ucla.edu/scholarships/ursp/students/}{\textbf{Undergraduate Research Scholars Program (URSP)}}\hfill{}9/2023--6/2024
 \begin{adjustwidth}{0pt}{\righthandindent}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Scholarship for senior thesis in sociology (\$\thinspace{}6,000).
 \end{itemize}
 \end{adjustwidth}
@@ -206,7 +203,7 @@
 \href{https://sociology.fas.harvard.edu/}{\textbf{Harvard Sociology: History of Crime and Punishment}}\hfill 7/2024--Present
 \begin{adjustwidth}{0pt}{\righthandindent}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Research Assistant for Professor Adaner Usmani
 \end{itemize}
 \end{adjustwidth}
@@ -214,7 +211,7 @@
 \href{https://www.workingclasspolitics.org/}{\textbf{The Center for Working Class Politics}}\hfill 7/2024--Present
 \begin{adjustwidth}{0pt}{\righthandindent}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Research Assistant
 \end{itemize}
 \end{adjustwidth}
@@ -222,15 +219,15 @@
 \href{https://soc.ucla.edu/undergraduate-study/department-honors-program/}{\textbf{UCLA Sociology Departmental Honors Program}}\hfill{}3/2023--6/2024
 \begin{adjustwidth}{0pt}{\righthandindent}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Senior thesis
 \end{itemize}
 \end{adjustwidth}
 
-\href{https://polisci.ucla.edu/academics/undergraduate/honors-program/}{\textbf{UCLA Political Science Departmental Honors Program}}\hfill{}3/2023--6/2024
+\href{https://polisci.ucla.edu/academics/undergraduate/honors-program/}{\textbf{UCLA Political Science Departmental Honors Program}}\hfill{}3/2023--4/2024
 \begin{adjustwidth}{0pt}{\righthandindent}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Senior thesis
 \end{itemize}
 \end{adjustwidth}
@@ -238,16 +235,16 @@
 \textbf{Undergraduate Research Experience}, UCLA Political Science\hfill{}8/2022--12/2022
 \begin{adjustwidth}{0pt}{1.8in}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Assisted a graduate student with data collection for a political psychology
 experiment in the Race, Ethnicity, and Politics subdiscipline.
 \end{itemize}
 \end{adjustwidth}
 
-\href{https://bayhonors.org/}{\textbf{Bay Honors Research Symposium}} \hfill{}4/2022
+\href{https://bayhonors.org/}{\textbf{Bay Honors Research Symposium}} \hfill{}4/2020
 \begin{adjustwidth}{0pt}{1.8in}
 \vspace{-7pt}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em, itemsep=0pt]
     \item[] Accepted to give a presentation about eminent domain and global warming; canceled because of COVID-19. (See `Publications' for the corresponding paper.)
 \end{itemize}
 \end{adjustwidth}

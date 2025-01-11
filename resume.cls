@@ -53,6 +53,14 @@
 \usepackage[sorting=ydnt]{biblatex}
 \usepackage{needspace}
 \usepackage{standalone}
+\usepackage{fontspec}
+% \setmainfont{Trebuchet MS}
+% \setmainfont{Merriweather}
+% \setmainfont{Libre Baskerville}
+% \setmainfont{Crimson Pro}
+% \setmainfont{Caladea}
+\setmainfont{Georgia}
+% \setmainfont{Times New Roman}
 % \usepackage{bibentry} % For inline bibliography entries
 % \usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
 % \usepackage{filecontents} % To create an inline .bib file
