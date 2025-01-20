@@ -59,7 +59,7 @@
 % \setmainfont{Libre Baskerville}
 % \setmainfont{Crimson Pro}
 % \setmainfont{Caladea}
-\setmainfont{Georgia}
+% \setmainfont{Georgia}
 % \setmainfont{Times New Roman}
 % \usepackage{bibentry} % For inline bibliography entries
 % \usepackage[style=numeric,sorting=ydnt]{biblatex} % Numeric style with square brackets
@@ -97,11 +97,29 @@
 \AtDataInput{\stepcounter{entrycount}}
 \DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
 \newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
+
+%---------------------------------------------------------------
+%	SECTION FORMATTING
+%---------------------------------------------------------------
+\newenvironment{rSection}[1]{ % The single parameter is for the section title
+    \Needspace{5\baselineskip} % Ensure at least 5 lines stay together
+    \smallskip % Vertical whitespace
+    \MakeUppercase{\textbf{#1}} % Section title
+    \medskip % Vertical whitespace
+    \hrule % Horizontal rule
+    \begin{list}{}{ % List to indent the entire content of the section
+        \setlength{\leftmargin}{0pt} % Indent to the left of the list
+    }
+    \item[] % Empty list item to enable indentation
+}{
+    \end{list}
+}
+
 %---------------------------------------------------------------
 %	NAME AND ADDRESS COMMANDS
 %---------------------------------------------------------------
 
-\newcommand{\name}[1]{\renewcommand{\name}{#1}} % Defines the \name command to set the user's name
+% \newcommand{\name}[1]{\renewcommand{\name}{#1}} % Defines the \name command to set the user's name
 
 % \newcommand{\addressSep}{$\diamond$} % Set default address separator to a diamond symbol
 
@@ -154,20 +172,3 @@
 % 	\@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}} % Output the second address if specified
 % 	\@ifundefined{@addressthree}{}{\printaddress{\@addressthree}} % Output the third address if specified
 % }
-
-%---------------------------------------------------------------
-%	SECTION FORMATTING
-%---------------------------------------------------------------
-\newenvironment{rSection}[1]{ % The single parameter is for the section title
-    \Needspace{5\baselineskip} % Ensure at least 5 lines stay together
-    \medskip % Vertical whitespace
-    \MakeUppercase{\textbf{#1}} % Section title
-    \medskip % Vertical whitespace
-    \hrule % Horizontal rule
-    \begin{list}{}{ % List to indent the entire content of the section
-        \setlength{\leftmargin}{0pt} % Indent to the left of the list
-    }
-    \item[] % Empty list item to enable indentation
-}{
-    \end{list}
-}

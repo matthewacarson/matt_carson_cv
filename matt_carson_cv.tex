@@ -21,6 +21,9 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %--------------------------------------------------------------------
 \documentclass[12pt]{resume} % Use the resume class
+\usepackage{silence}
+\WarningFilter{fancyhdr}{\headheight is too small}
+\setlength{\headheight}{25pt} % Adjust headheight as suggested
 %\renewcommand{\labelitemi}{-} % Redefine the itemize label to use dashes
 %--------------------------------------------------------------------
 %	MARGINS
@@ -33,6 +36,14 @@
 %	showframe, % Uncomment to show how the type block is set on the page
 }
 
+\setmainfont{GeorgiaPro}[
+    Path = fonts/,
+    Extension = .ttf,  % or .otf depending on your files
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
 %--------------------------------------------------------------------
 %	HEADERS
 %--------------------------------------------------------------------
@@ -49,7 +60,7 @@
 \fancypagestyle{firstpagestyle}{
     \fancyhf{} % clear all header and footer fields
     % \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{bit.ly/CarsonCV}}
-    \fancyhead[L]{Curriculum Vitae}
+    \fancyhead[L]{\center{\LARGE{\bfseries{Matthew A. Carson}}\\\normalsize{Curriculum Vitae}}}
     \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
     \fancyfoot[L]{\href{https://bit.ly/CarsonCV}{\the\month/\the\day/\the\year}}
 }
@@ -72,14 +83,17 @@
 
 \begin{document}
 
-\centerline{\MakeUppercase{\huge\bfseries{Matthew A. Carson}}}
-\bigskip
+\thispagestyle{firstpagestyle}
+\raggedright
+\renewcommand{\labelitemi}{\scriptsize$\bullet$}
+% \centerline{\LARGE\bfseries{Matthew A. Carson}} % \MakeUppercase{}
+% \smallskip
 \ifthenelse{\boolean{contactInformation}}
 {\begin{table}[h]
     \centering
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-        \href{mailto:carsonmatt@ucla.edu}{Email: \texttt{carsonmatt@ucla.edu}}& \href{http://matthewacarson.github.io}{Website: \texttt{matthewacarson.github.io}} \\
-        \href{tel:9255650297}{Phone: \texttt{(925) 565-0297}}& \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}} \\
+        \href{mailto:carsonmatt@ucla.edu}{\textbf{Email:} \texttt{carsonmatt@ucla.edu}}& \href{http://matthewacarson.github.io}{\textbf{Website:} \texttt{matthewacarson.github.io}} \\
+        \href{tel:9255650297}{\textbf{Phone:} \texttt{(925) 565-0297}}& \href{https://bit.ly/CarsonCV}{\textbf{Latest CV:} \texttt{https://bit.ly/CarsonCV}} \\
     \end{tabular*}
 \end{table}}
   % If false
@@ -90,14 +104,10 @@
         \href{https://bit.ly/CarsonCV}{Latest CV: \texttt{bit.ly/CarsonCV}}& \\
     \end{tabular*}
 \end{table}}
-
-
-\thispagestyle{firstpagestyle}
-\raggedright
-\renewcommand{\labelitemi}{\scriptsize$\bullet$}
-%--------------------------------------------------------------------
+\vspace{-10pt}
+%----------------------------------------------------------
 %	EDUCATION SECTION
-%--------------------------------------------------------------------
+%----------------------------------------------------------
 \begin{rSection}{Education}
 \setlist[itemize]{itemsep=0pt, topsep=0pt, parsep=0pt}
 \begin{itemize}[leftmargin=0em, itemsep=0pt]
@@ -115,14 +125,16 @@
 % Political Science Thesis
 \item[] \textbf{Political Science Best Honors Thesis Prize}
 \begin{itemize}[leftmargin=1em, itemsep=0pt, rightmargin=6em]
-    \item[] \href{https://bit.ly/PoliSciSample}{\textit{The Policing of the `Reserve Army': Economic Inequality and Police Killings.} Writing sample: \texttt{https://bit.ly/PoliSciSample}}
+    \item[] \href{https://bit.ly/PoliSciSample}{\textit{The Policing of the `Reserve Army': Economic Inequality and Police Killings.}
+    \item[] Writing sample: \texttt{https://bit.ly/PoliSciSample}}
     \item[] Advisor: Chris Tausanovitch
 \end{itemize}
 \vspace{6pt}
 % Sociology Thesis
 \item[] \textbf{Sociology Best Honors Thesis: Lisa Mederos Memorial Prize}
 \begin{itemize}[leftmargin=1em, itemsep=0pt, rightmargin=5em]
-    \item[] \href{https://bit.ly/SocSample}{\textit{Construction Union Agreements: Union Organizing in Historical- Comparative Perspective.} Writing sample: \texttt{https://bit.ly/SocSample}}
+    \item[] \href{https://bit.ly/SocSample}{\textit{Construction Union Agreements: Union Organizing in Historical- Comparative Perspective.} 
+    \item[] Writing sample: \texttt{https://bit.ly/SocSample}}
     \item[] Advisor: Zsuzsa Berend
     \end{itemize}
 \end{itemize}
